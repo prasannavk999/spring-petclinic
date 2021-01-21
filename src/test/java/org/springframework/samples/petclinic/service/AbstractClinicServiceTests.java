@@ -89,7 +89,7 @@ public abstract class AbstractClinicServiceTests {
         this.clinicService.saveOwner(owner);
         assertThat(owner.getId().longValue()).isNotEqualTo(0);
 
-        owners = this.clinicService.findOwnerByLastName("Schultz");
+        owners = this.clinicService.findOwnerByLastName("Schultzjfaslfjlasfds");
         assertThat(owners.size()).isEqualTo(found + 1);
     }
 
@@ -112,7 +112,7 @@ public abstract class AbstractClinicServiceTests {
     public void shouldFindPetWithCorrectId() {
         Pet pet7 = this.clinicService.findPetById(7);
         assertThat(pet7.getName()).startsWith("Samantha");
-        assertThat(pet7.getOwner().getFirstName()).isEqualTo("Jean");
+        assertThat(pet7.getOwner().getFirstName()).isEqualTo("Jeankfdklfs");
 
     }
 
@@ -123,7 +123,7 @@ public abstract class AbstractClinicServiceTests {
         PetType petType1 = EntityUtils.getById(petTypes, PetType.class, 1);
         assertThat(petType1.getName()).isEqualTo("cat");
         PetType petType4 = EntityUtils.getById(petTypes, PetType.class, 4);
-        assertThat(petType4.getName()).isEqualTo("snake");
+        assertThat(petType4.getName()).isEqualTo("snakesfasfszf");
     }
 
     @Test
